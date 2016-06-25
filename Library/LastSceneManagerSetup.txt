@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/Rebekah/Desktop/UiA_code/ch02/ch02/Assets/Scene.unity
+  isLoaded: 1
+  isActive: 1

@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{99D0897F-3C01-A9F3-36BC-3473B25DD7F9}") = "UAI Project - Doom", "Assembly-CSharp.csproj", "{2D12DFAF-F185-1C37-1F68-522CED757A08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D12DFAF-F185-1C37-1F68-522CED757A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D12DFAF-F185-1C37-1F68-522CED757A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D12DFAF-F185-1C37-1F68-522CED757A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D12DFAF-F185-1C37-1F68-522CED757A08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
