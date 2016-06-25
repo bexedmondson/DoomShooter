@@ -5,7 +5,7 @@ using System.Collections;
 [AddComponentMenu("Control Script/FPS Input")]
 public class FPSInput : MonoBehaviour {
 	private CharacterController charController;
-	public float gravity = -9.8f;
+	public float gravity = -3f;
 	public float speed = 6.0f;
 
 	void Start() {
