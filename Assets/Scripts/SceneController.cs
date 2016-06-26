@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour {
 	void Update () {
 		if (enemy == null) {
 			enemy = Instantiate(enemyPrefab) as GameObject; //create copy of prefab in scene
-			enemy.transform.position = new Vector3(0, 1, 0);
+			enemy.transform.position = new Vector3(0, 0, 0);
 			enemy.transform.Rotate(0, Random.Range(0, 360), 0);
 		}
 	}
