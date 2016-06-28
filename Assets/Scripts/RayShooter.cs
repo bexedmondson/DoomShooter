@@ -4,6 +4,9 @@ using System.Collections;
 public class RayShooter : MonoBehaviour {
 	private Camera playerCamera;
 
+	[SerializeField] private GameObject fireballPrefab;
+	private GameObject fireball;
+
 	void Start () {
 		playerCamera = GetComponent<Camera>();
 
@@ -30,22 +33,14 @@ public class RayShooter : MonoBehaviour {
 
 				ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
 
+				fireball = Instantiate(fireballPrefab) as GameObject;
+				fireball.transform.position = transform.TransformPoint(Vector3.forward * 2f); //place fireball in front of shooter
+				fireball.transform.rotation = transform.rotation; //point fireball in same direction
+
 				if (target != null) {
 					target.ReactToHit();
-				} else {
-					StartCoroutine(SphereIndicator(hit.point)); //pass in a method call to start running
 				}
 			}
 		}
-	}
-
-	private IEnumerator SphereIndicator(Vector3 pos) {
-		GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-		sphere.transform.position = pos;
-
-		yield return new WaitForSeconds(1); //yield tells coroutine where to pause game and run next frame etc
-		//called function runs until it hits a yield
-
-		Destroy(sphere);
 	}
 }

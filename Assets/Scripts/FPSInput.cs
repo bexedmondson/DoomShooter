@@ -8,8 +8,12 @@ public class FPSInput : MonoBehaviour {
 	public float gravity = -3f;
 	public float speed = 6.0f;
 
+	private Animator staffAnimator;
+
 	void Start() {
 		charController = GetComponent<CharacterController>();
+
+		staffAnimator = GameObject.FindWithTag("staff").GetComponent<Animator>();
 	}
 
 	void Update() {
@@ -22,5 +26,11 @@ public class FPSInput : MonoBehaviour {
 		movement.y = gravity;
 		movement = transform.TransformDirection(movement);
 		charController.Move(movement);
+
+		if (movement.x != 0 || movement.z != 0) {
+			staffAnimator.SetBool("Walking", true);
+		} else {
+			staffAnimator.SetBool("Walking", false);
+		}
 	}
 }
